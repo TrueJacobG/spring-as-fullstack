@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Document</title>
+		<script src='https://unpkg.com/htmx.org/dist/htmx.min.js'></script>
+	</head>
+	<body>
+		<div>
+			<div><label>First Name</label>: Joe</div>
+			<div><label>Last Name</label>: Blow</div>
+			<div><label>Email</label>: joe@blow.com</div>
+			<div hx-target="this" hx-swap="outerHTML">
+				this will be replaced
+				<button hx-get="/api/data" class="btn primary">
+					Click To Edit
+				</button>
+			</div>
+
+		</div>
+	</body>
+</html>
