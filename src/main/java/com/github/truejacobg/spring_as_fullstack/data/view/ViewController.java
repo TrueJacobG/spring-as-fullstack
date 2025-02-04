@@ -15,9 +15,7 @@ class ViewController {
     }
 
     @RequestMapping("/alpinejs")
-    String getAlpinJs() {
-        return "data/alpinejs";
-    }
+    String getAlpinJs() { return "data/alpinejs"; }
 
     @RequestMapping
     String getData() {
@@ -26,7 +24,7 @@ class ViewController {
 
     @RequestMapping("/{id}")
     ModelAndView getDataById(@PathVariable String id) {
-        var model = new ModelAndView("data/data");
+        var model = new ModelAndView("data/thymeleaf");
         model.addObject(id);
         return model;
     }
