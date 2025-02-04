@@ -14,6 +14,11 @@ class ViewController {
         return "data/htmx";
     }
 
+    @RequestMapping("/alpinejs")
+    String getAlpinJs() {
+        return "data/alpinejs";
+    }
+
     @RequestMapping
     String getData() {
         return "data/index";
